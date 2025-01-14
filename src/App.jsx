@@ -15,15 +15,22 @@ const Container = styled.div`
   };
   font-family: 'JetBrains Mono', monospace;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 `
 function App() {
   return (
     <>
       <Navbar/>
       <Container>
-        <Introduction/>
-        <Projects/>
-        <Contacts/>
+        <div id="introduction">
+          <Introduction/>
+        </div>
+        <div id="projects">
+          <Projects/>
+        </div>
+        <div id="contacts">
+          <Contacts/>
+        </div>
       </Container>
     </>
   )
