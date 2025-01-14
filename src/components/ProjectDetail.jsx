@@ -37,7 +37,7 @@ const StyledWrapper = styled.div`
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     border: 1px solid black;
     width: 100%;
-    height: 700px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,6 +65,7 @@ const StyledWrapper = styled.div`
     object-fit: cover;
     align-items: center;
     justify-content: center;
+    margin-top: 40px;
   }
 
   .title {

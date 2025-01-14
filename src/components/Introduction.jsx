@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
-import Navbar from './Navbar';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { FaLinkedin } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import './Introduction.css';
+import './introduction.css';
 const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;

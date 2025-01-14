@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import Introduction from './components/Introduction'
 import Projects from './components/Projects'
-import Socials from './components/Socials'
 import Contacts from './components/Contacts'
 import Navbar from './components/Navbar'
 import { ThemeContext } from './ThemeContext';
@@ -25,7 +24,6 @@ function App() {
         <Introduction/>
         <Projects/>
         <Contacts/>
-        <Socials/>
       </Container>
     </>
   )

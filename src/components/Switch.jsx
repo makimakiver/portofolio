@@ -18,6 +18,8 @@ const StyledWrapper = styled.div`
   .toggle-switch {
     position: relative;
     padding: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
     width: 100px;
     height: 50px;
     --light: #d8dbe0;

@@ -31,11 +31,6 @@ const List = styled.ul`
   gap: 20px;
   list-style: none;
 `;
-const Button = styled.button`
-  background: none;
-  border: none;
-  cursor: pointer;
-`;
 function Navbar() {
   const { isLightTheme, toggleTheme } = useContext(ThemeContext);
   return (
@@ -51,9 +46,6 @@ function Navbar() {
                 </List>
             </Links>
         </Container>
-        {/* <Button onClick={toggleTheme}>
-            {isLightTheme ? 'dark' : 'light'}
-        </Button> */}
         <Switch onChange={toggleTheme} isLightTheme={isLightTheme}>
             {isLightTheme ? 'dark' : 'light'}
         </Switch>
