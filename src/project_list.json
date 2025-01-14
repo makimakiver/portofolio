@@ -1,0 +1,33 @@
+[{
+    "project-id": 1,
+    "projectName": "Online Chatbot platform",
+    "projectDetail": "It is an online chatbot platform where users can create and share their chatbots. In backend, I integrated the 'ANNOY' recommendation algorithm to suggest chatbots users may like. I learned how to use OpenAI API to generate chatbots with specific behaviors or personas. In frontend, I designed the website using the React framework. I created UI components with Figma.  Language: JavaScript.",
+    "projectLink": "https://github.com/makimakiver/tuba",
+    "projectExperience": ["React", "Figma", "Postman", "MongoDB", "Node.js", "Express.js", "OpenAI API"],
+    "projectImgPath": "img/pro1.jpg"
+},
+{
+    "project-id": 2,
+    "projectName": "IELTS examiner",
+    "projectDetail": "It is an automated IELTS examiner that can grade the IELTs writing task 2 and give feedback to the user. I implemented a system which will measure the similarity between the user's writing and the question. I obtained embeddings by using the OpenAI API. Language used: Python.",
+    "project-Link": "https://github.com/makimakiver/comp-coursework",
+    "projectExperience": ["Python", "SQL", "OpenAI API", "PostgreSQL"],
+    "projectImgPath": "img/pro2.jpg"
+},
+{
+    "project-id": 3,
+    "projectName": "Crowdfunding platform",
+    "projectDetail": "This project was completed in a hackathon and is a crowdfunding platform where users can fund whatever crowdfunding projects they like. The application is built on stellar blockchain network. My team created a smart contract in which users can easily create a pool and other users can fund the pool. The smart contract is deployed on the stellar network. We also made a frontend to be more friendly to the users by using green color and a simple UI. ",
+    "project-Link": "https://github.com/makimakiver/stellarCrowdSpark",
+    "projectExperience": ["Rust", "Astro"],
+    "projectImgPath": "img/pro3.jpg"
+},
+{
+    "project-id": 4,
+    "projectName": "Q&A platform",
+    "projectDetail": "This project is a Q&A platform where users will set a prize on a question and other users will answer the question. Answer with the most likes will be the best answer and user who posted the answer will get the prize. This decentralized application is built on sui network to execute the transaction as quick as possible. The frontend is written in typescript and currently implementing the system which will distribute the sui token as a reward to the user who posted the best answer. ",
+    "project-Link": "https://github.com/makimakiver/shopify-app",
+    "projectExperience": ["TypeScript", "Move"],
+    "projectImgPath": "img/pro4.jpg"
+}
+]

@@ -1,0 +1,58 @@
+.project_Dark {
+    width: 60%;
+    height: 100%;
+    position: relative; /* Needed for the pseudo-element positioning */
+    cursor: pointer;
+}
+
+/* The 'invisible' underline initially (width: 0) */
+.project_Dark::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;           /* Thickness of the underline */
+    width: 0;              /* Start with zero width */
+    background: white;      /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth expansion */
+}
+
+/* Expand the underline to 100% width on hover */
+.project_Dark:hover::after {
+    width: 100%;
+}
+
+.project_Light {
+    width: 60%;
+    height: 100%;
+    position: relative; /* Needed for the pseudo-element positioning */
+    cursor: pointer;
+}   
+/* The 'invisible' underline initially (width: 0) */
+.project_Light::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;           /* Thickness of the underline */
+    width: 0;              /* Start with zero width */
+    background: black;      /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth expansion */
+}
+
+/* Expand the underline to 100% width on hover */
+.project_Light:hover::after {
+    width: 100%;
+}
+/* Existing styles for text inside the project */
+.project-title{
+    font-size: 20px;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.project-desc{
+    font-size: 14px;
+    padding: 10px;
+}

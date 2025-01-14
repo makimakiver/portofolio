@@ -4,6 +4,8 @@ import Projects from './components/Projects'
 import Socials from './components/Socials'
 import Contacts from './components/Contacts'
 import Navbar from './components/Navbar'
+import { ThemeContext } from './ThemeContext';
+import { useContext } from 'react';
 const Container = styled.div`
   height: 100vh;
   scroll-snap-type: y mandatory;
@@ -12,15 +14,20 @@ const Container = styled.div`
   &::-webkit-scrollbar { 
     display: none;
   };
-  color: white;
-  background-color: #000;
   font-family: 'JetBrains Mono', monospace;
+  overflow-x: hidden;
 `
 function App() {
   return (
-    <Container>
-      <Introduction/>
-    </Container>
+    <>
+      <Navbar/>
+      <Container>
+        <Introduction/>
+        <Projects/>
+        <Contacts/>
+        <Socials/>
+      </Container>
+    </>
   )
 }
 

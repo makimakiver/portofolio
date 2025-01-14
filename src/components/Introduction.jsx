@@ -6,7 +6,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { FaLinkedin } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import './introduction.css';
+import './Introduction.css';
 const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
@@ -20,24 +20,26 @@ const Container = styled.div`
   width: 1400px;
   display: flex;
   justify-content: space-between;
-  margin-right: 170px;
+  position: relative;
 `;
 const Left = styled.div`
-  position: absolute;
-  margin-left: 100px;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 30px;
   padding-left: 100px;
-  z-index: 100;
+  min-width: 800px;
+  margin-bottom: 150px;
 `;
 const Right = styled.div`
-  margin-left: 400px;
+  position: relative;
   inset:0;
   pointer-events: none;
   margin-right: 100px;
   margin-bottom: 100px;
+  min-width: 320px;
+  margin-bottom: 150px;
 `;
 const Title = styled.h1`
   font-size: 74px;
@@ -79,21 +81,30 @@ const Icons = styled.div`
 function Introduction() {
     // gltf file must be in public folder
     useEffect(() => {
-        // Initialize Three.js scene
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(10, window.innerWidth / window.innerHeight, 0.1, 1000);
-        camera.position.z = 250;
+        camera.position.set(30, -2.5, 300);
+    
+        const renderer = new THREE.WebGLRenderer({ alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+    
+        const container = document.getElementById('container3D');
+        if (container) {
+            container.innerHTML = ''; // Clear existing content
+            container.appendChild(renderer.domElement);
+        }
+    
         const loader = new GLTFLoader();
         loader.load(
             '/me.glb',
             (gltf) => {
                 const photo = gltf.scene;
+                photo.name = 'my3DObject'; // Assign a unique name
                 scene.add(photo);
-                
+    
                 const animate = () => {
                     requestAnimationFrame(animate);
-                   
-                    photo.rotation.y += 0.01; // Example animation
+                    photo.rotation.y += 0.01; // Example rotation animation
                     renderer.render(scene, camera);
                 };
                 animate();
@@ -103,15 +114,9 @@ function Introduction() {
                 console.error('Error loading GLTF model:', error);
             }
         );
-
-        const renderer = new THREE.WebGLRenderer({ alpha: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.getElementById('container3D').appendChild(renderer.domElement);
-        renderer.render(scene, camera);
-      }, []);
+    }, []);
   return (
     <Section>
-        <Navbar/>
         <Container>
             <Left>
                 <h2>Hello it's</h2>
@@ -166,7 +171,7 @@ function Introduction() {
                 </Icons>
             </Left>
             <Right>
-                <div id='container3D' style={{marginRight: '300px'}}>
+                <div id='container3D'>
                 </div>
                 <script type='module'></script>
             </Right>

@@ -1,15 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
-
+import { ThemeContext } from '../ThemeContext';
+import Switch from './Switch';
 const Section = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
 `
 const Container = styled.div`
-  width: 1400px;
+  width: 1270px;
   display: flex;
-  padding: 30px 0px;
+  padding-top: 10px;
 `;
 const Links = styled.div`
   display: flex;
@@ -30,12 +31,18 @@ const List = styled.ul`
   gap: 20px;
   list-style: none;
 `;
+const Button = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+`;
 function Navbar() {
+  const { isLightTheme, toggleTheme } = useContext(ThemeContext);
   return (
     <Section>
         <Container>
             <Links>
-                <Logo src="../img/logo3.png"/>
+                <Logo src={isLightTheme ? '../img/logo3.png' : '../img/logo2.png'}/>
                 <List>
                     <ListItem>Home</ListItem>
                     <ListItem>Projects</ListItem>
@@ -44,6 +51,12 @@ function Navbar() {
                 </List>
             </Links>
         </Container>
+        {/* <Button onClick={toggleTheme}>
+            {isLightTheme ? 'dark' : 'light'}
+        </Button> */}
+        <Switch onChange={toggleTheme} isLightTheme={isLightTheme}>
+            {isLightTheme ? 'dark' : 'light'}
+        </Switch>
     </Section>
   )
 }
