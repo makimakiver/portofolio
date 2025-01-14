@@ -5,7 +5,7 @@ import { ThemeContext } from '../ThemeContext';
 import ProjectDetail from './ProjectDetail';
 
 const Section = styled.div`
-  height: 100vh;
+  height: 90vh;
   width: 85%;
   margin: 0 auto;
   scroll-snap-align: center;
@@ -27,7 +27,7 @@ const Left = styled.div`
 const Right = styled.div`
     width: 100%;
     height: 700px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 `
 const Title = styled.h1`
     width: 50%;
